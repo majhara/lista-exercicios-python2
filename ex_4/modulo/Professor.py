@@ -11,12 +11,12 @@ class Professor:
     def __modifica_salario(self, valor):
         self.valor = valor
         self.salario += valor
-        print(f"O novo salário de {self.nome} é de {self.salario} reais")
     
     def acessa_salario(self, id_usuario, senha, valor):
         if id_usuario == '123456789' and senha == '987654321':
             print("Você tem permissão para acessar esse método!")
             self.__modifica_salario(valor)
+            return f'O novo salário de {self.nome} é de {self.salario} reais'
         else:
             print("Acesso negado!")
             
